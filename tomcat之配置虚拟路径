@@ -1,0 +1,21 @@
+方式1：在%tomcat%/conf/server.xml的配置虚拟路径 – 必须重启tomcat
+<host>中添加
+<Context path=”访问路径” docBase=”web项目实际路径” reloadable="true"/>
+	path： 表示虚拟目录的名称（前面的正斜杠“/”可以省略）
+  docBase：可以设置绝对路径，也可设置相对路径，相对路径是相对 appBase 属性所设的目录而言的
+  reloadable：表示修改应用程序后，tomcat自动帮你部署（reload），不用重新启动
+  注意：Context 必须是大写
+	      标签必须结束
+	      path就是名称，不需要/，一般path="" 
+方式2：在%tomcat%/conf/Catalina/localhost/xxx.xml 文件
+文件内容：<Context docBase=”web项目实际路径” />
+在tomcat文件夹的 conf\catalina\localhost增加xxx .xml文件
+(%tomcat%/conf/引擎名称/主机名称/xxx.xml)
+   xxx:文件名,自定义，xml文件就是需要访问路径
+   文件内容:
+     <Context path="/project" reloadable="true" docBase="E:\javastudio\oob" workDir="E:\javastudio\oob\work" />
+     docBase是项目文件夹的web-inf文件夹的上一层目录
+     workDir是指Tomcat解析Jsp转换为Java文件，并编译为class存放的文件夹，设置 在项目文件夹里面，
+         可以避免移植到其他地方首次读取jsp文件需要重新解析 。一般格式：项目文件夹\work
+     reloadable是指可以重新加载，一般设置为true，方便使用，不需要经常重启Tomcat。
+以后启动Tomcat，在浏览器输入 http://localhost:8080/xxx就能访问该xxx项目的welcome文件。
