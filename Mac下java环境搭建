@@ -1,6 +1,9 @@
 
 
 jdk1.7+tomat+eclipse+maven
+自己的mac其实已经买了大半年，但由于一直在windows系统上开发，最近由于各种原因，终于鼓起勇气拥抱我的大mac
+
+
 开发环境：
   1、jdk1.7:https://jdk7.java.net/download.html，选择对应的macos版本
   2、sdk7:http://www.oracle.com/technetwork/java/javaee/downloads/index.html 
