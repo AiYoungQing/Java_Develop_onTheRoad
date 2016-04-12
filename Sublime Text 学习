@@ -1,0 +1,14 @@
+Sublime Text作为一个优秀的代码编辑器，虽然是收费的，但是可以无限期试用，
+最初由程序员Jon Skinner于2008年1月份所开发出来，它最初被设计为一个具有丰富扩展功能的Vim。
+OS X下快捷键：
+  Command+l 选择整行，按住Commond，继续点击l会继续选择下一行
+  Command+kk 从光标出删除至行尾
+  Command+k+delete 从光标出删除至行首
+  Command+j 合并行（前提条件是已选择需要合并的多行）
+  Command+ku 将光标所指向的单词改为大写
+  Command+kl 将光标所指向的单词改为小写
+  Command+d 选择当前字符串，继续按下d，会选择下一个相同的字符串
+  Command+m 光标移动至括号内开始或结束的位置
+  Command+/ 注释整行（如果已经选择了内容，同Command+Shift+/)
+  Command+Shift+/ 注释掉已经选择的内容
+  未完待续
